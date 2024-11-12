@@ -66,6 +66,10 @@ body {
   margin: 0rem;
 }
 
+p {
+  color: gray;
+}
+
 .page-container .page-content {
   width: 100vw;
   height: 100vh;
@@ -83,7 +87,7 @@ body {
   height: 100vh;
   object-fit: cover;
   border-radius: 8px;
-  filter: saturate(0.5) sepia(0.4) blur(1px);
+  filter: saturate(0.5) sepia(0.4);
   transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
   opacity: 0;
   transform: scale(0.8);
@@ -104,6 +108,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.page-container .page-content .login-page-container .login-wrapper form .logo {
+  margin-bottom: 1rem;
 }
 .page-container .page-content .login-page-container .login-wrapper form .logo img {
   content: url("https://amadeus.com/content/dam/amadeuswebevo/brand/amadeus/logos/amadeus-logo-dark-sky.png");
@@ -148,6 +155,7 @@ body {
   background: #000835;
   color: white;
   transition: transform ease-in-out 0.15s;
+  font-size: 1.2rem;
 }
 .page-container .page-content .login-page-container .login-wrapper form .form #sign-in:hover {
   transform: scale(1.03);

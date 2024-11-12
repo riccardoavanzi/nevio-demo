@@ -72,6 +72,9 @@ body{
     font-family:$font;
     margin: 0rem;
 }
+p{
+    color: $paragraph-color;
+}
 
 // LOGIN PAGE
 .page-container{
@@ -92,7 +95,7 @@ body{
                     border-radius: 8px;
             
                     // Apply both saturate and sepia in a single filter for better control
-                    filter: saturate(0.5) sepia(0.4) blur(1px);
+                    filter: saturate(0.5) sepia(0.4);
             
                     // Smooth transition for both scaling and opacity
                     transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
@@ -118,6 +121,7 @@ body{
                     flex-direction: column;
                     align-items: center;
                     .logo{
+                        margin-bottom: 1rem;
                         img{
                             content: url('https://amadeus.com/content/dam/amadeuswebevo/brand/amadeus/logos/amadeus-logo-dark-sky.png');
                             width: 130px;
@@ -161,6 +165,7 @@ body{
                             background: $dark-blue;
                             color: white;
                             transition: transform ease-in-out 0.15s;
+                            font-size: 1.2rem;
                             &:hover{
                                 transform: scale(1.03);
                             }
