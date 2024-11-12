@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Nevio shell demo</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-content">
+            <div class="login-page-container">
+                <div class="adv-banner">
+                    <img id="banner-img" src="" alt="">
+                </div>
+                <div class="login-wrapper">
+                    <form action="">
+                        <div class="logo">
+                            <img src="" alt="Amadeus logo">
+                        </div>
+                        <div class="form">
+                            <h4>Please sign in</h4>
+                            <div class="inputs-container">
+                                <input type="email" placeholder="Email" id="name">
+                                <input type="password" name="password" id="pwd" placeholder="Password">
+                            </div>
+                            <button type="button" id="sign-in">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- IMAGE SCRIPT -->
+<script>
+    const images = [
+        "https://images.unsplash.com/photo-1712746438459-0afe52569da9?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1517868163143-6eb6c78dbf54?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ];
+
+    let currentIndex = 0;
+    const bannerImg = document.getElementById('banner-img');
+
+    // Display the initial image immediately
+    bannerImg.src = images[currentIndex];
+    bannerImg.classList.add('fade-zoom');
+
+    function changeBannerImage() {
+        // Fade out effect
+        bannerImg.classList.remove('fade-zoom');
+
+        // After fade-out, change image and fade back in
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            bannerImg.src = images[currentIndex];
+            bannerImg.classList.add('fade-zoom');
+        }, 500); // Adjust this delay for smooth fade-out
+    }
+
+    // Automatically change the image every 5 seconds
+    setInterval(changeBannerImage, 3000);
+</script>
+</body>
+</html>

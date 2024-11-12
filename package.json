@@ -1,0 +1,16 @@
+{
+  "name": "nevio-demo",
+  "version": "1.0.0",
+  "description": "nevio-demo-console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riccardo Avaniz",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "remixicon": "^4.5.0",
+    "sass": "^1.80.6"
+  }
+}
