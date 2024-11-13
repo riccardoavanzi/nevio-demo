@@ -172,7 +172,7 @@ button {
 }
 
 #dashboard {
-  background: #EBF3FE;
+  background: white;
   position: relative;
 }
 #dashboard .dashboard-navigation-bar {
@@ -272,11 +272,11 @@ button {
 }
 #dashboard .dashboard-container {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 100px auto;
   height: calc(100% - 80px);
 }
 #dashboard .dashboard-container .dashboard-left-drawer {
-  width: fit-content;
+  width: 100px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -286,6 +286,7 @@ button {
   background: white;
   border-radius: 0px 20px 20px 0px;
   padding: 1rem;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list {
   display: flex;
@@ -313,6 +314,21 @@ button {
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item .label {
   color: #000835;
+}
+#dashboard .dashboard-container .dashboard-main {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content {
+  border-radius: 20px;
+  background: #EBF3FE;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  box-sizing: border-box;
 }
 #dashboard #chat-container {
   position: fixed;
