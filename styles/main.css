@@ -152,7 +152,7 @@ button {
   outline: #EBF3FE;
 }
 .page-container .page-content .login-page-container .login-wrapper form .form .inputs-container input ::placeholder {
-  color: #000835;
+  color: #000833;
 }
 .page-container .page-content .login-page-container .login-wrapper form .form .inputs-container input#name {
   margin-bottom: 0rem;
@@ -167,7 +167,7 @@ button {
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
-  background: #000835;
+  background: #000833;
   color: white;
   font-size: 1.2rem;
   transition: transform ease-in-out 0.15s;
@@ -207,7 +207,7 @@ button {
   margin-right: 0.5rem;
 }
 #dashboard .dashboard-navigation-bar .dnb-left .dnb-logo p {
-  color: #000835;
+  color: #000833;
   font-size: 0.8rem;
   margin-top: 0.2rem;
 }
@@ -232,7 +232,7 @@ button {
   margin-right: 1rem;
 }
 #dashboard .dashboard-navigation-bar .dnb-right .dnb-button i {
-  color: #000835;
+  color: #000833;
 }
 #dashboard .dashboard-navigation-bar .dnb-right .dnb-button:hover {
   transform: scale(1.03);
@@ -320,7 +320,7 @@ button {
   cursor: pointer;
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item.active {
-  background: #000835;
+  background: #000833;
   box-sizing: border-box;
   border-radius: 8px;
 }
@@ -337,10 +337,10 @@ button {
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item .icon i {
   font-size: 2rem;
-  color: #000835;
+  color: #000833;
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item .label {
-  color: #000835;
+  color: #000833;
   font-size: 0.8rem;
 }
 @media screen and (max-width: 768px) {
@@ -431,6 +431,7 @@ button {
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content {
   height: 100%;
   overflow-y: scroll;
+  scrollbar-color: #000833 #EBF3FE;
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -513,7 +514,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #000835;
+  background: #000833;
   border-radius: 8px 8px 0px 0px;
 }
 #dashboard #chat-container #chat-dialogue .chat-dialogue-header .status {
