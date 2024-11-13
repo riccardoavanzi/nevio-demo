@@ -3,73 +3,71 @@
 
 // FONT-IMPORT
 // @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-Light";
-    font-style:normal;
-    font-weight:400;
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.ttf") format('ttf"')
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-Medium";
-    font-style:normal;
-    font-weight:400;
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.eot") format("embedded-opentype"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-Regular";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-Black";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-BlackItalic";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"AmadeusNeue-Bold";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-BoldItalic";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-LightItalic";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-RegularItalic";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.ttf") format("ttf")
-}
-@font-face{
-    font-display:swap;
-    font-family:"Amadeus-MediumItalic";
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.eot");
-    src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.ttf") format("ttf")
-}
-
 // COMMON STYLES
 body{
-    font-family:"Amadeus-Regular";
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-Light";
+        font-style:normal;
+        font-weight:400;
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Light.ttf") format('ttf"')
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-Medium";
+        font-style:normal;
+        font-weight:400;
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.eot") format("embedded-opentype"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Medium.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-Regular";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-Black";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Black.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-BlackItalic";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BlackItalic.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"AmadeusNeue-Bold";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Bold.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-BoldItalic";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-BoldItalic.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-LightItalic";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-LightItalic.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-RegularItalic";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-RegularItalic.ttf") format("ttf")
+    }
+    @font-face{
+        font-display:swap;
+        font-family:"Amadeus-MediumItalic";
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.eot");
+        src:url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff2") format("woff2"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff") format("woff"),url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.ttf") format("ttf")
+    }
     margin: 0rem;
     line-height: 1rem;
     }

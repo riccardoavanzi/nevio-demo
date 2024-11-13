@@ -1,3 +1,7 @@
+body {
+  margin: 0rem;
+  line-height: 1rem;
+}
 @font-face {
   font-display: swap;
   font-family: "Amadeus-Light";
@@ -60,11 +64,6 @@
   font-family: "Amadeus-MediumItalic";
   src: url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.eot");
   src: url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff2") format("woff2"), url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.woff") format("woff"), url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-MediumItalic.ttf") format("ttf");
-}
-body {
-  font-family: "Amadeus-Regular";
-  margin: 0rem;
-  line-height: 1rem;
 }
 
 p {
