@@ -179,6 +179,7 @@ button {
 #dashboard {
   background: white;
   position: relative;
+  height: 100vh;
 }
 #dashboard .dashboard-navigation-bar {
   width: 100vw;
@@ -288,6 +289,7 @@ button {
   display: grid;
   grid-template-columns: 100px auto;
   height: calc(100% - 80px);
+  box-sizing: border-box;
 }
 #dashboard .dashboard-container .dashboard-left-drawer {
   width: 100px;
@@ -369,6 +371,7 @@ button {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content {
   border-radius: 20px;
@@ -378,15 +381,17 @@ button {
   box-sizing: border-box;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container {
-  position: relative;
   width: 100%;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content {
   width: 100%;
+  position: relative;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-header {
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   background: white;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   border-radius: 20px 20px 0px 0px;
@@ -419,31 +424,33 @@ button {
   flex-direction: row;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main {
+  padding-top: 100px;
+  padding-bottom: 2rem;
+  height: 100%;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content {
+  height: 100%;
   overflow-y: scroll;
-  scrollbar-width: none;
-  padding-top: 150px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table {
-  width: 95%;
-  margin: auto;
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content table {
+  overflow-y: scroll;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table table {
-  border-radius: 8px;
-}
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-dot {
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content table .status-dot {
   height: 10px;
   width: 10px;
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-active {
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content table .status-active {
   background-color: green;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-draft {
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content table .status-draft {
   background-color: blue;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-inactive {
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main .view-main-content table .status-inactive {
   background-color: gray;
 }
 #dashboard #chat-container {
