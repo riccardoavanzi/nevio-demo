@@ -132,6 +132,12 @@ button {
   flex-direction: column;
   align-items: center;
 }
+@font-face {
+  font-display: swap;
+  font-family: "Amadeus-Regular";
+  src: url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.eot");
+  src: url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff2") format("woff2"), url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.woff") format("woff"), url("https://amadeus.com/etc.clientlibs/amadeuswebevo/clientlibs/clientlib-amadeus/resources/fonts/amadeus-neue/AmadeusNeue-Regular.ttf") format("ttf");
+}
 .page-container .page-content .login-page-container .login-wrapper form .form .inputs-container {
   display: flex;
   flex-direction: column;
@@ -415,6 +421,30 @@ button {
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main {
   overflow-y: scroll;
   scrollbar-width: none;
+  padding-top: 150px;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table {
+  width: 95%;
+  margin: auto;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table table {
+  border-radius: 8px;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-active {
+  background-color: green;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-draft {
+  background-color: blue;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main #product-table .status-inactive {
+  background-color: gray;
 }
 #dashboard #chat-container {
   position: fixed;
