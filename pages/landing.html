@@ -3,11 +3,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nevio Product Catalogue - Demo Dashboard</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
+    <!-- SEARCH MODAL -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- PAGE CONTAINER -->
     <div class="page-container">
         <div class="page-content" id="dashboard">
             <!-- NAVIGATION BAR -->
@@ -15,7 +35,7 @@
                 <div class="dnb-left">
                     <div class="dnb-logo">
                         <img src="" alt="">
-                        <p class="small">Nevio</p>
+                        <p class="small">Nevio Cockpit</p>
                     </div>
                     <div class="logo-bottom">
                         <p class="chip">UAT test</p>
@@ -25,11 +45,15 @@
                     <button class="dnb-button" id="settings">
                         <i class="ri-settings-line"></i>
                     </button>
-                    <button class="dnb-button" id="search">
-                        <i class="ri-search-2-line"></i>
-                    </button>
                     <button class="dnb-button" id="notifications">
                         <i class="ri-notification-4-line"></i>
+                    </button>
+                    <button id="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <div class="search-label">Search anything</div>
+                        <div class="search-commands">
+                            <kbd class="DocSearch-Button-Key">⌘ K</kbd>
+                            <!-- <kbd class="DocSearch-Button-Key"></kbd> -->
+                        </div>
                     </button>
                     <button id="profile">
                         <div class="avatar-picture">
@@ -53,7 +77,7 @@
                             </div>
                             <div class="menu-list">
                                 <!-- MONITOR -->
-                                <button class="menu-item active" id="monitor">
+                                <button class="menu-item" id="monitor">
                                     <div class="icon"><i class="ri-pulse-ai-line"></i></div>
                                     <div class="label">Monitor</div>
                                 </button>
@@ -68,7 +92,7 @@
                                     <div class="label">Automate</div>
                                 </button>
                                 <!-- PRODUCTS -->
-                                <button class="menu-item" id="products">
+                                <button class="menu-item active" id="products">
                                     <div class="icon"><i class="ri-grid-fill"></i></div>
                                     <div class="label">Products</div>
                                 </button>
@@ -84,6 +108,77 @@
                 <!-- MAIN CONTAINER -->
                 <div class="dashboard-main">
                     <div class="dashboard-main-content" id="main">
+                        <!-- MONITOR VIEW -->
+                        <!-- CATALOG VIEW -->
+                        <div class="view-container" id="catalogue-view">
+                            <div class="view-content">
+                                <!-- VIEW HEADER -->
+                                <div class="view-header">
+                                    <div class="view-header-titles">
+                                        <div class="view-header-title">Products</div>
+                                        <div class="view-header-subtitle">Subtitle</div>
+                                    </div>
+                                    <div class="view-header-actions">
+                                        <!-- ACTION 1 -->
+                                        <div class="view-header-action">
+                                            <div class="btn-group">
+                                                <div class="action-label">Label</div>
+                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Element one
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                  <li><hr class="dropdown-divider"></li>
+                                                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- ACTION 2 -->
+                                        <div class="view-header-action">
+                                            <div class="btn-group">
+                                                <div class="action-label">Label</div>
+                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Element one
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                  <li><hr class="dropdown-divider"></li>
+                                                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- ACTION 3 -->
+                                        <div class="view-header-action">
+                                            <div class="btn-group">
+                                                <div class="action-label">Label</div>
+                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Element one
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                  <li><hr class="dropdown-divider"></li>
+                                                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIEW MAIN CONTAINER -->
+                                <div class="view-main">
+                                    
+                                </div>
+                                <div class="view-footer"></div>
+                            </div>
+                        </div>
+                        <!-- AUTOMATION VIEW -->
+                        <!-- PRODUCTS VIEW -->
+                        <!-- ORDERS VIEW -->
                     </div>
                 </div>
             </div>

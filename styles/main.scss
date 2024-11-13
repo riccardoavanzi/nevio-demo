@@ -69,20 +69,20 @@
 
 // COMMON STYLES
 body{
-    font-family:$font;
+    font-family:"Amadeus-Regular";
     margin: 0rem;
+    line-height: 1rem;
     }
 p{
     color: $paragraph-color;
     margin: 0rem;
+    font-size: 1rem;
 }
 button{
-    padding-inline-start: 0rem !important;
-    padding-inline-end: 0rem !important;
-    padding-block: 0rem !important;
-    padding-inline: 0rem !important;
     background: none;
     border: none;
+    padding-block: 0rem;
+    padding-inline: 0rem;
 }
 // LOGIN PAGE
 .page-container{
@@ -205,8 +205,9 @@ button{
                     margin-right: .5rem;
                 }
                 p{
-                    font-weight: 700;
                     color: $dark-blue;
+                    font-size: .8rem;
+                    margin-top: .2rem;
                 }
             }
             .logo-bottom{
@@ -233,6 +234,22 @@ button{
                     transform: scale(1.03);
                     cursor: pointer;
                 }
+            }
+            #search{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 200px;
+                height: 2rem;
+                border-radius: 8px;
+                background: rgb(246, 241, 241);
+                margin-right: 1rem;
+                padding: .5rem;
+                .search-label{
+                    color: gray;
+                    font-size: .8rem;
+                }
+
             }
             #profile{
                 display: flex;
@@ -281,32 +298,39 @@ button{
             .menu-container{
                 background: white;
                 border-radius: 0px 20px 20px 0px;
-                padding: 1rem;
                 box-shadow: $shadow;
+                padding-top: .8rem;
+                padding-bottom: .8rem;
                 .menu-content{
                     .menu-list{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         .menu-item{
-                            margin: 1rem auto;
+                            margin: .8rem auto;
                             transition: transform ease-in-out 0.15s;
+                            padding: .5rem .3rem;
                             &:hover{
                                 transform: scale(1.03);
                                 cursor: pointer;
                             }
                             &.active{
+                                background: $dark-blue;
+                                box-sizing: border-box;
+                                border-radius: 8px;
                                 .icon{
                                     i{
-                                        color: $accent-blue;
+                                        color: $light-blue;
                                     }
                                 }
                                 .label{
-                                    color: $accent-blue;
+                                    color: $light-blue;
                                     font-weight: 800;
                                 }
                             }
                             .icon{
+                                margin-bottom: .5rem;
+                                line-height: normal;
                                 i{
                                     font-size: 2rem;
                                     color: $dark-blue;
@@ -314,12 +338,36 @@ button{
                             }
                             .label{
                                 color: $dark-blue;
+                                font-size: .8rem;
                             }
                         }
                     }
                 }
             }
         }
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            .dashboard-left-drawer{
+                width: fit-content;
+                height: fit-content;
+                margin: auto;
+                .menu-container{
+                    border-radius: 20px!important;
+                    .menu-content{
+                        .menu-list{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                            .menu-item{
+                                margin: 0rem 1rem;
+                            }
+                            }
+                        }
+                    }
+                }
+            }
         .dashboard-main{
             padding: 1rem;
             width: 100%;
@@ -330,9 +378,56 @@ button{
                 background: $light-blue;
                 height: 100%;
                 width: 100%;
-                overflow-y: scroll;
-                scrollbar-width: none;
                 box-sizing: border-box;
+                .view-container{
+                    position: relative;
+                    width: 100%;
+                    .view-content{
+                        width: 100%;
+                        .view-header{
+                            width: 100%;
+                            position: absolute;
+                            background: white;
+                            box-shadow: $shadow;
+                            border-radius: 20px 20px 0px 0px;
+                            padding: 1.5rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .view-header-titles{
+                                .view-header-title{
+                                    font-size: 1.5rem;
+                                    font-weight: 900;
+                                    margin-bottom: .5rem;
+                                }
+                            }
+                            .view-header-actions{
+                                display: flex;
+                                align-items: center;
+                                .view-header-action{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    .btn-group{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-start;
+                                        .action-label{
+                                            padding-left: .75rem;
+                                        }
+                                        .dropdown-toggle{
+                                            font-weight: 800;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .view-main{
+                            overflow-y: scroll;
+                            scrollbar-width: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -371,9 +466,15 @@ button{
                     flex-direction: column;
                     justify-content: center;
                     background: $accent-blue;
+                    padding-inline-start: 0rem;
+                    padding-inline-end: 0rem;
+                    padding-block-start: 0rem;
+                    padding-block-end: 0rem;
+                    padding-block: 0rem;
+                    padding-inline: 0rem;
+                    padding: 1.1rem .8rem;
                     i{
                         font-size: 1.5rem;
-                        padding: .8rem;
                         color: white;
                     }
                 }
@@ -424,7 +525,7 @@ button{
                                 width: .5rem;
                                 height: .5rem;
                                 border-radius: $round;
-                                background-color: $light-blue;
+                                background-color: green;
                                 margin-right: .5rem;
                             }
                             p{
@@ -467,6 +568,7 @@ button{
                             padding: .5rem;
                             border-radius: 8px;
                             background: rgb(244, 231, 231);
+                            line-height: 1.2rem;
                         }
                         .timing{
                             font-size: .8rem;
@@ -489,6 +591,7 @@ button{
                             padding: .5rem;
                             border-radius: 8px;
                             background: $light-blue;
+                            line-height: 1.2rem;
                         }
                         .timing{
                             font-size: .8rem;
