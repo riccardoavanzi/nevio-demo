@@ -68,6 +68,16 @@ body {
 
 p {
   color: gray;
+  margin: 0rem;
+}
+
+button {
+  padding-inline-start: 0rem !important;
+  padding-inline-end: 0rem !important;
+  padding-block: 0rem !important;
+  padding-inline: 0rem !important;
+  background: none;
+  border: none;
 }
 
 .page-container .page-content {
@@ -154,11 +164,290 @@ p {
   border-radius: 8px;
   background: #000835;
   color: white;
-  transition: transform ease-in-out 0.15s;
   font-size: 1.2rem;
+  transition: transform ease-in-out 0.15s;
 }
 .page-container .page-content .login-page-container .login-wrapper form .form #sign-in:hover {
   transform: scale(1.03);
+}
+
+#dashboard {
+  background: #EBF3FE;
+  position: relative;
+}
+#dashboard .dashboard-navigation-bar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+#dashboard .dashboard-navigation-bar .dnb-left {
+  display: flex;
+  align-items: flex-start;
+}
+#dashboard .dashboard-navigation-bar .dnb-left .dnb-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+#dashboard .dashboard-navigation-bar .dnb-left .dnb-logo img {
+  content: url("/assets/logo.png");
+  margin-right: 0.5rem;
+}
+#dashboard .dashboard-navigation-bar .dnb-left .dnb-logo p {
+  font-weight: 700;
+  color: #000835;
+}
+#dashboard .dashboard-navigation-bar .dnb-left .logo-bottom {
+  width: fit-content;
+}
+#dashboard .dashboard-navigation-bar .dnb-left .logo-bottom .chip {
+  padding: 0.2rem 0.5rem;
+  background: #9340C8;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 300;
+}
+#dashboard .dashboard-navigation-bar .dnb-right {
+  display: flex;
+  align-items: center;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #search {
+  font-size: 1.2rem;
+  transition: transform ease-in-out 0.15s;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #search:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #notifications {
+  margin: 0rem 1rem;
+  transition: transform ease-in-out 0.15s;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #notifications:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #notifications i {
+  font-size: 1.2rem;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile {
+  display: flex;
+  transition: transform ease-in-out 0.15s;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile .avatar-picture {
+  padding-left: 1rem;
+  border-left: 1px solid gray;
+  margin-right: 0.8rem;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile .avatar-picture img {
+  content: url("https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile .profile-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile .profile-details .name {
+  font-weight: 800;
+}
+#dashboard .dashboard-navigation-bar .dnb-right #profile .profile-details .role {
+  color: #1664DD;
+  font-size: 0.8rem;
+}
+#dashboard #chat-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+}
+#dashboard #chat-container .chat-buttons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+#dashboard #chat-container .chat-buttons .label {
+  display: flex;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  height: fit-content !important;
+  margin-right: 0.5rem;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+#dashboard #chat-container .chat-buttons .label p {
+  color: gray;
+  margin-bottom: 0rem;
+}
+#dashboard #chat-container .chat-buttons .button-container #displayChat {
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1664DD;
+}
+#dashboard #chat-container .chat-buttons .button-container #displayChat i {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  color: white;
+}
+#dashboard #chat-container #chat-dialogue {
+  display: none;
+  width: 24rem;
+  background: white;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #000835;
+  border-radius: 8px 8px 0px 0px;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 100%;
+  padding: 0.3rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .img img {
+  width: 26px;
+  height: 26px;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .name {
+  margin-left: 0.5rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .name #nevio-title {
+  margin-bottom: 0rem;
+  color: white;
+  font-size: 1rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .name .label {
+  display: flex;
+  align-items: center;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .name .label .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: #EBF3FE;
+  margin-right: 0.5rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .status .name .label p {
+  color: #EBF3FE;
+  font-size: 0.8rem;
+  margin-bottom: 0rem !important;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .close #close-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-header .close #close-chat i {
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  color: white;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body {
+  height: 22rem;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .user-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .user-input .user-input-content {
+  display: flex;
+  flex-direction: column;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .user-input .user-input-content .u-message {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgb(244, 231, 231);
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .user-input .user-input-content .timing {
+  font-size: 0.8rem;
+  color: gray;
+  margin: 0.5rem 0.2rem;
+  text-align: right;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .response {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .response .response-content .b-message {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: #EBF3FE;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-body .response .response-content .timing {
+  font-size: 0.8rem;
+  color: gray;
+  margin: 0.5rem 0.2rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto 0rem auto;
+  padding: 0.8rem;
+  border-top: 1px solid #EBF3FE;
+  box-sizing: border-box;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-input input {
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-input .send button {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dashboard #chat-container #chat-dialogue .chat-dialogue-input .send button i {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

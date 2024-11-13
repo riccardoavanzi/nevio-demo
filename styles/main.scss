@@ -1,5 +1,6 @@
 // VARIABLES IMPORT
 @import'variables';
+
 // FONT-IMPORT
 // @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face{
@@ -67,15 +68,22 @@
 }
 
 // COMMON STYLES
-
 body{
     font-family:$font;
     margin: 0rem;
-}
+    }
 p{
     color: $paragraph-color;
+    margin: 0rem;
 }
-
+button{
+    padding-inline-start: 0rem !important;
+    padding-inline-end: 0rem !important;
+    padding-block: 0rem !important;
+    padding-inline: 0rem !important;
+    background: none;
+    border: none;
+}
 // LOGIN PAGE
 .page-container{
     .page-content{
@@ -87,25 +95,18 @@ p{
             .adv-banner {
                 height: 100vh;
                 box-sizing: border-box;
-            
                 #banner-img {
                     width: 100%;
                     height: 100vh;
                     object-fit: cover;
                     border-radius: 8px;
-            
-                    // Apply both saturate and sepia in a single filter for better control
                     filter: saturate(0.5) sepia(0.4);
-            
-                    // Smooth transition for both scaling and opacity
                     transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-                    opacity: 0; // Initial state for fade-in effect
-                    transform: scale(0.8); // Initial zoom-out state
-            
-                    // Class to activate the fade-in and zoom-in effect
+                    opacity: 0;
+                    transform: scale(0.8);
                     &.fade-zoom {
-                        opacity: 1; // Fade in
-                        transform: scale(0.9); // Slight zoom-in for effect
+                        opacity: 1;
+                        transform: scale(0.9);
                     }
                 }
             }
@@ -164,8 +165,8 @@ p{
                             border-radius: 8px;
                             background: $dark-blue;
                             color: white;
-                            transition: transform ease-in-out 0.15s;
                             font-size: 1.2rem;
+                            transition: transform ease-in-out 0.15s;
                             &:hover{
                                 transform: scale(1.03);
                             }
@@ -173,6 +174,298 @@ p{
                     }
                 }
             }
+        }
+    }
+}
+
+// DASHBOARD
+#dashboard{
+    background: $light-blue;
+    position: relative;
+    .dashboard-navigation-bar{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        .dnb-left{
+            display: flex;
+            align-items: flex-start;
+            .dnb-logo{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-right: 1rem;
+                img{
+                    content: url('/assets/logo.png');
+                    margin-right: .5rem;
+                }
+                p{
+                    font-weight: 700;
+                    color: $dark-blue;
+                }
+            }
+            .logo-bottom{
+                width: fit-content;
+                .chip{
+                    padding: .2rem .5rem;
+                    background: $violet;
+                    border-radius: 20px;
+                    font-size: .8rem;
+                    color: white;
+                    font-weight: 300;
+                }
+            }
+        }
+        .dnb-right{
+            display: flex;
+            align-items: center;
+            #search{
+                font-size: 1.2rem;
+                transition: transform ease-in-out 0.15s;
+                &:hover{
+                    transform: scale(1.03);
+                    cursor: pointer;
+                }
+            }
+            #notifications{
+                margin: 0rem 1rem;
+                transition: transform ease-in-out 0.15s;
+                &:hover{
+                    transform: scale(1.03);
+                    cursor: pointer;
+                }
+                i{
+                    font-size: 1.2rem;
+                }
+            }
+            #profile{
+                display: flex;
+                transition: transform ease-in-out 0.15s;
+                &:hover{
+                    transform: scale(1.03);
+                    cursor: pointer;
+                }
+                .avatar-picture{
+                    padding-left: 1rem;
+                    border-left: 1px solid gray;
+                    margin-right: .8rem;
+                    img{
+                        content: url('https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                        width: 32px;
+                        height: 32px;
+                        object-fit: cover;
+                        border-radius: $round;
+                    }
+                }
+                .profile-details{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    .name{
+                        font-weight: 800;
+                    }
+                    .role{
+                        color: $accent-blue;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    // CHAT
+    #chat-container{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: fit-content;
+        .chat-buttons{
+            display: flex;
+            margin-bottom: 1rem;
+            .label{
+                display: flex;
+                padding: .5rem;
+                background: white;
+                border-radius: 8px;
+                height: fit-content !important;
+                margin-right: .5rem;
+                box-shadow: $shadow;
+                p{
+                    color: $paragraph-color;
+                    margin-bottom: 0rem;
+                }
+
+            }
+            .button-container{
+                #displayChat{
+                    border-radius: $round;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: $accent-blue;
+                    i{
+                        font-size: 1.5rem;
+                        padding: .8rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+        #chat-dialogue{
+            display: none;
+            width: 24rem;
+            background: white;
+            flex-direction: column;
+            border-radius: 8px;
+            box-shadow: $shadow;
+            .chat-dialogue-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                background: $dark-blue;
+                border-radius: 8px 8px 0px 0px;
+                .status{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .img{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: fit-content;
+                        border-radius: $round;
+                        padding: .3rem;
+                        img{
+                            width: 26px;
+                            height: 26px;
+                        }
+                    }
+                    .name{
+                        margin-left: .5rem;
+                        #nevio-title{
+                            margin-bottom: 0rem;
+                            color: white;
+                            font-size: 1rem;
+                        }
+                        .label{
+                            display: flex;
+                            align-items: center;
+                            .dot{
+                                width: .5rem;
+                                height: .5rem;
+                                border-radius: $round;
+                                background-color: $light-blue;
+                                margin-right: .5rem;
+                            }
+                            p{
+                                color: $light-blue;
+                                font-size: .8rem;
+                                margin-bottom: 0rem !important;
+                            }
+                        }
+                    }
+                }
+                .close{
+                    #close-chat{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border-radius: $round;
+                        i{
+                            font-size: 1rem;
+                            margin-bottom: 0rem;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .chat-dialogue-body{
+                height: 22rem;
+                overflow-y: scroll;
+                padding: 1rem;
+                .user-input{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    .user-input-content{
+                        display: flex;
+                        flex-direction: column;
+                        .u-message{
+                            display: flex;
+                            width: fit-content;
+                            margin: auto;
+                            padding: .5rem;
+                            border-radius: 8px;
+                            background: rgb(244, 231, 231);
+                        }
+                        .timing{
+                            font-size: .8rem;
+                            color: gray;
+                            margin: .5rem .2rem;
+                            text-align: right;
+                        }
+                    }
+
+                }
+                .response{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    .response-content{
+                        .b-message{
+                            display: flex;
+                            width: fit-content;
+                            margin: auto;
+                            padding: .5rem;
+                            border-radius: 8px;
+                            background: $light-blue;
+                        }
+                        .timing{
+                            font-size: .8rem;
+                            color: gray;
+                            margin: .5rem .2rem;
+                        }
+                    }
+                }
+            }
+            .chat-dialogue-input{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin: 1rem auto 0rem auto;
+                padding: .8rem;
+                border-top: 1px solid $light-blue;
+                box-sizing: border-box;
+                input{
+                    padding: .2rem;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    margin-right: .5rem;
+                }
+                .send{
+                    button{
+                        background: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        i{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

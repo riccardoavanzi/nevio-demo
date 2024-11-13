@@ -1,0 +1,220 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevio Product Catalogue - Demo Dashboard</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-content" id="dashboard">
+            <!-- NAVIGATION BAR -->
+            <div class="dashboard-navigation-bar">
+                <div class="dnb-left">
+                    <div class="dnb-logo">
+                        <img src="" alt="">
+                        <p class="small">Nevio</p>
+                    </div>
+                    <div class="logo-bottom">
+                        <p class="chip">UAT test</p>
+                    </div>
+                </div>
+                <div class="dnb-right">
+                    <button id="search">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                    <button id="notifications">
+                        <i class="ri-notification-4-line"></i>
+                    </button>
+                    <button id="profile">
+                        <div class="avatar-picture">
+                            <img src="" alt="">
+                        </div>
+                        <div class="profile-details">
+                            <div class="name">Riccardo</div>
+                            <div class="role">Sales</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- DASHBOARD CONTAINER -->
+            <div class="dashboard-container">
+                <!-- LEFT DRAWER -->
+                <div class="dashboard-left-drawer">
+                    
+                </div>
+                <!-- MAIN CONTAINER -->
+                <div class="dashboard-main"></div>
+            </div>
+            <!-- CHAT -->
+            <div id="chat-container">
+                <div class="chat-buttons">
+                    <div class="label"><p>Ask Nevio AI</p></div>
+                    <div class="button-container">
+                        <button id="displayChat" onclick="displayChat()">
+                            <i class="ri-bard-line"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="chat-dialogue">
+                    <div class="chat-dialogue-header">
+                        <div class="status">
+                            <!-- <div class="img">
+                                <img src="/assets/img/logo/favicon.png" alt="airline logo">
+                            </div> -->
+                            <div class="name">
+                                <div id="nevio-title">Nevio AI</div>
+                                <div class="label">
+                                    <div class="dot"></div>
+                                    <p>Available</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="close">
+                            <button id="close-chat" onclick="closeChat()"><i class="ri-arrow-down-s-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="chat-dialogue-body">
+                        <div class="user-input">
+                            <div class="user-input-content">
+                                <div class="u-message"></div>
+                                <div class="timing"></div>
+                            </div>
+                        </div>
+                        <div class="response">
+                            <div class="response-content">
+                                <div class="b-message"></div>
+                                <div class="timing"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-dialogue-input">
+                        <input id="user-input-message" type="text" placeholder="Type your message">
+                        <div class="send">
+                            <button>
+                                <i class="ri-send-plane-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <!-- CHAT JS -->
+    <script>
+        function displayChat() {
+            document.getElementById("chat-dialogue").style.display = "flex";
+        }
+    
+        function closeChat() {
+            document.getElementById("chat-dialogue").style.display = "none";
+        }
+    
+        const userInput = document.getElementById('user-input-message');
+        const chatDialogueBody = document.querySelector('.chat-dialogue-body');
+        const responseMessage = document.querySelector('.response-content .b-message');
+        const responseTiming = document.querySelector('.response-content .timing');
+    
+        function getTimestamp() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            return `${hours}:${minutes}`;
+        }
+    
+        function addMessage(message, isUser) {
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add(isUser ? 'user-input' : 'response');
+
+            const messageContent = document.createElement('div');
+            messageContent.classList.add(isUser ? 'user-input-content' : 'response-content');
+
+            const messageClass = isUser ? 'u-message' : 'b-message';
+            
+            const messageElement = document.createElement('div');
+            messageElement.classList.add(messageClass);
+            messageElement.textContent = message;
+
+            const timingElement = document.createElement('div');
+            timingElement.classList.add('timing');
+            timingElement.textContent = getTimestamp();
+
+            messageContent.appendChild(messageElement);
+            messageContent.appendChild(timingElement);
+
+            messageContainer.appendChild(messageContent);
+            chatDialogueBody.appendChild(messageContainer);
+
+            if (isUser) {
+                userInput.value = '';
+            }
+
+            chatDialogueBody.scrollTop = chatDialogueBody.scrollHeight;
+        }
+
+    
+        function displayWelcomeMessage() {
+            const welcomeMessage = "Welcome to Nevio AI. Let me know how I can help you!";
+            const timestamp = getTimestamp();
+            responseMessage.textContent = welcomeMessage;
+            responseTiming.textContent = timestamp;
+        }
+    
+        function getAIResponse(userInput) {
+        // Assuming chat-data.json is located in the "chat" folder
+        fetch('./chat/faqs.json')
+            .then(response => response.json())
+            .then(chatData => {
+                const userInputLower = userInput.toLowerCase();
+
+                for (const category in chatData) {
+                    for (const { Question, Answer } of chatData[category]) {
+                        const questionLower = Question.toLowerCase();
+
+                        const hasKeyword = userInputLower.split(' ').some(keyword => questionLower.includes(keyword));
+
+                        if (hasKeyword) {
+                            addMessage(Answer, false);
+                            return;
+                        }
+                    }
+                }
+
+                // If no match is found, display a generic response
+                addMessage("I'm sorry, I couldn't find information related to your query. Please try using different keywords or contact our support team for assistance.", false);
+            })
+            .catch(error => {
+                console.error('Error fetching chat data:', error);
+                // Handle error fetching data, e.g., show a default message
+                addMessage("I'm sorry, there was an error fetching information. Please try again later or contact our support team.", false);
+            });
+        }
+    
+        const openChatButton = document.getElementById('displayChat');
+        openChatButton.addEventListener('click', () => {
+            displayWelcomeMessage();
+        });
+    
+        function sendMessage() {
+            const message = userInput.value;
+            if (message.trim() !== '') {
+                addMessage(message, true);
+                getAIResponse(message);
+            }
+        }
+    
+        const sendButton = document.querySelector('.chat-dialogue-input button');
+        sendButton.addEventListener('click', sendMessage);
+    
+        userInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
