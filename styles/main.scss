@@ -184,12 +184,14 @@ button{
     position: relative;
     .dashboard-navigation-bar{
         width: 100vw;
+        height: 80px;
+        padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1.5rem;
         box-sizing: border-box;
         overflow-x: hidden;
+        box-sizing: border-box;
         .dnb-left{
             display: flex;
             align-items: flex-start;
@@ -270,6 +272,58 @@ button{
                     .role{
                         color: $accent-blue;
                         font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard-container{
+        display: grid;
+        grid-template-columns: 15% 85%;
+        height: calc(100% - 80px);
+        .dashboard-left-drawer{
+            width: fit-content;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .menu-container{
+                background: white;
+                border-radius: 0px 20px 20px 0px;
+                padding: 1rem;
+                .menu-content{
+                    .menu-list{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .menu-item{
+                            margin: 1rem auto;
+                            transition: transform ease-in-out 0.15s;
+                            &:hover{
+                                transform: scale(1.03);
+                                cursor: pointer;
+                            }
+                            &.active{
+                                .icon{
+                                    i{
+                                        color: $accent-blue;
+                                    }
+                                }
+                                .label{
+                                    color: $accent-blue;
+                                    font-weight: 800;
+                                }
+                            }
+                            .icon{
+                                i{
+                                    font-size: 2rem;
+                                    color: $dark-blue;
+                                }
+                            }
+                            .label{
+                                color: $dark-blue;
+                            }
+                        }
                     }
                 }
             }
