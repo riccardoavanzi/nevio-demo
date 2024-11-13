@@ -405,9 +405,6 @@ button{
                                 display: flex;
                                 align-items: center;
                                 .view-header-action{
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-start;
                                     .btn-group{
                                         display: flex;
                                         flex-direction: column;
@@ -418,6 +415,9 @@ button{
                                         .dropdown-toggle{
                                             font-weight: 800;
                                         }
+                                    }
+                                    .split{
+                                        flex-direction: row;
                                     }
                                 }
                             }

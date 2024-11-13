@@ -399,11 +399,6 @@ button {
   display: flex;
   align-items: center;
 }
-#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-header .view-header-actions .view-header-action {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-header .view-header-actions .view-header-action .btn-group {
   display: flex;
   flex-direction: column;
@@ -414,6 +409,9 @@ button {
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-header .view-header-actions .view-header-action .btn-group .dropdown-toggle {
   font-weight: 800;
+}
+#dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-header .view-header-actions .view-header-action .split {
+  flex-direction: row;
 }
 #dashboard .dashboard-container .dashboard-main .dashboard-main-content .view-container .view-content .view-main {
   overflow-y: scroll;
