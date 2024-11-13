@@ -219,24 +219,17 @@ button {
   display: flex;
   align-items: center;
 }
-#dashboard .dashboard-navigation-bar .dnb-right #search {
+#dashboard .dashboard-navigation-bar .dnb-right .dnb-button {
   font-size: 1.2rem;
   transition: transform ease-in-out 0.15s;
+  margin-right: 1rem;
 }
-#dashboard .dashboard-navigation-bar .dnb-right #search:hover {
+#dashboard .dashboard-navigation-bar .dnb-right .dnb-button i {
+  color: #000835;
+}
+#dashboard .dashboard-navigation-bar .dnb-right .dnb-button:hover {
   transform: scale(1.03);
   cursor: pointer;
-}
-#dashboard .dashboard-navigation-bar .dnb-right #notifications {
-  margin: 0rem 1rem;
-  transition: transform ease-in-out 0.15s;
-}
-#dashboard .dashboard-navigation-bar .dnb-right #notifications:hover {
-  transform: scale(1.03);
-  cursor: pointer;
-}
-#dashboard .dashboard-navigation-bar .dnb-right #notifications i {
-  font-size: 1.2rem;
 }
 #dashboard .dashboard-navigation-bar .dnb-right #profile {
   display: flex;

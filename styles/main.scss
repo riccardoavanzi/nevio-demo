@@ -224,23 +224,14 @@ button{
         .dnb-right{
             display: flex;
             align-items: center;
-            #search{
+            .dnb-button{
                 font-size: 1.2rem;
                 transition: transform ease-in-out 0.15s;
+                margin-right: 1rem;
+                i{color: $dark-blue;}
                 &:hover{
                     transform: scale(1.03);
                     cursor: pointer;
-                }
-            }
-            #notifications{
-                margin: 0rem 1rem;
-                transition: transform ease-in-out 0.15s;
-                &:hover{
-                    transform: scale(1.03);
-                    cursor: pointer;
-                }
-                i{
-                    font-size: 1.2rem;
                 }
             }
             #profile{
