@@ -305,7 +305,7 @@ button {
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item {
   margin: 0.8rem auto;
   transition: transform ease-in-out 0.15s;
-  padding: 0.5rem 0.3rem;
+  padding: 0.5rem;
 }
 #dashboard .dashboard-container .dashboard-left-drawer .menu-container .menu-content .menu-list .menu-item:hover {
   transform: scale(1.03);
